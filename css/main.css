@@ -1,4 +1,4 @@
-@import'//fonts.googleapis.com/css?family=Raleway';
+
 @import'gallery.css';
 @import'banner.css';
 
@@ -41,7 +41,6 @@
 
 /* Main */
 body{
-    font-family: 'Raleway';
     font-size: 16px;
     margin: 0px;
     padding: 0px;
