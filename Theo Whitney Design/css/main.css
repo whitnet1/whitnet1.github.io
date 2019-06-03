@@ -1,0 +1,313 @@
+@import'https://fonts.googleapis.com/css?family=Raleway';
+@import'gallery.css';
+@import'banner.css';
+
+:root{
+
+    --a: #99e1e5;
+    --b: #f5587b;
+    --c: #fff591;
+    --d: #735372;
+    --e: #66d682;
+}
+
+/* Base Colors */
+.a{
+    background-color: var(--a);
+    color: var(--a)
+}
+.b{
+    background-color: var(--b);
+    color: var(--b)
+}
+.c{
+    background-color: var(--c);
+    color: var(--c)
+}
+.c p, .c h2{
+    color: black;
+}
+.c h1{
+    color: var(--c)
+}
+.d{
+    background-color: var(--d);
+    color: var(--d)
+}
+.e{
+    background-color: var(--e);
+    color: var(--e)
+}
+
+/* Main */
+body{
+    font-family: 'Raleway';
+    font-size: 16px;
+    margin: 0px;
+    padding: 0px;
+}
+
+p{
+    font-size: 16pt;
+}
+
+
+/* Navigation */
+header{
+    position: relative;
+    z-index: 20;
+}
+
+#navbar{
+    position: fixed;
+    top: 0;
+    transition: top 0.4s;
+    width: 100%;
+}
+
+.menu {
+    z-index: 50 !important;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    position: absolute;
+    width: 100%;
+    
+}
+
+.menu_pagewipes {
+    z-index: 40 !important;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    position: absolute;
+    width: 100%;
+    height: 0;
+}
+
+
+.menu:hover + .menu_pagewipes{
+    height: 100vh;
+}
+
+.currentbox{
+    text-decoration: none;
+    margin: 0;
+    padding: .5vh 1vw .5vh 1vw;
+    text-align: center;
+    position: relative;
+    height: 2.5em;
+    text-transform: uppercase;
+    font-style: italic;
+    color: black;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: bold;
+}
+.currentbox:hover{
+    text-decoration: none;
+    color: black;
+}
+.box{
+    background-color: black;
+    text-decoration: none;
+    margin: 0;
+    padding: .5vh 1vw .5vh 1vw;
+    text-align: center;
+    position: relative;
+    height: 2.5em;
+    text-transform: uppercase;
+    font-style: italic;
+    transition: height, background-color, color;
+    transition-duration: .5s;
+}
+
+
+.menu a:hover{
+    color: white;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.box.animation:hover{
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-y: 5vh;
+    height: 100vh;
+}
+
+.box.a:hover{
+    background-color: var(--a);
+}
+.box.b:hover{
+    background-color: var(--b);
+}
+.box.c:hover{
+    background-color: var(--c);
+}
+.box.d:hover{
+    background-color: var(--d);
+}
+.box.e:hover{
+    background-color: var(--e);
+}
+
+.box:focus{
+    background-color: black;
+}
+
+.hidden{
+    display: none;
+}
+.pagewipe{
+    height: 100%;
+    width: 0;
+    margin: 0;
+}
+
+.box.a.animation:hover{
+    background-image: url(../media/home-animation.gif);
+}
+.box.b.animation:hover{
+    background-image: url(../media/design-animation.gif);
+}
+.box.c.animation:hover{
+    background-image: url(../media/illustration-animation.gif);
+}
+.box.d.animation:hover{
+    background-image: url(../media/commissions-animation.gif);
+}
+.box.e.animation:hover{
+    background-image: url(../media/Contact-Animation.gif);
+}
+
+
+
+@keyframes fadeInEffect{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* SCROLL BAR */
+html {
+    scroll-behavior: smooth;
+}
+        /* width */
+::-webkit-scrollbar {
+    position: absolute;
+    width: 5px;
+}
+
+        /* Track */
+::-webkit-scrollbar-track {
+    box-shadow: in   set 0 0 5px grey; 
+    border-radius: 10px;
+}
+
+        /* Handle */
+::-webkit-scrollbar-thumb {
+    background: black; 
+    border-radius: 10px;
+}
+
+.feature{
+    text-align: center;
+}
+
+.feature-image{
+    position: relative;
+}
+
+.feature-image img{
+    width: 300px;
+    margin: 1em;
+}
+
+
+
+
+
+
+footer{
+    display: flex;
+}
+.home footer{
+    background-color: black;
+    transition-duration: .5s;
+}
+.home footer:hover{
+    background-color: #99e1e5;
+}
+.home .socialmedia-icons a:hover{
+    color: black !important;
+}
+.home main{
+    background-color: black;
+}
+
+.socialmedia-icons{
+    text-align: center;
+    font-size: 50pt;
+    flex: 1;
+    position: relative;
+    padding:0;
+    margin: 0;
+}
+.socialmedia-icons a{
+    color: black;
+    transition-duration: .2s;
+}
+.socialmedia-icons a:hover{
+    color: white;
+    text-decoration: none;
+}
+
+.home .socialmedia-icons a{
+    color: white;
+    transition-duration: .2s;
+}
+.home .socialmedia-icons a:hover{
+    color: black !important;
+    text-decoration: none;
+}
+
+.button{
+    background-color: black;
+    transition: .2s all ease;
+    padding: 12px 30px;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    color: var(--white-color) !important;
+    border:  none;
+    cursor: pointer;
+}
+
+.button:hover{
+    font-weight: bold;
+    color: black !important;
+    background-color: white;
+}
+
+.subscribe-container{
+    flex: 1;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.subscribe-container h1{
+    color: #000 !important;
+}
+
+.subscribe-container form{
+    margin: 10px;
+}
+
+.subscribe-container input[type=”email”]{
+    padding: 12px 30px;
+    height: 2.7em;
+    width: 250px;
+}

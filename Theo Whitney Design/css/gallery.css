@@ -1,0 +1,103 @@
+/* Gallery */
+.gallery-section{
+    display: flex;
+    padding: 0 2rem 3rem 2rem;
+    background: white;
+}
+.black-bgc{
+    background-color: black !important;
+}
+.gallery-title{
+    display: inline-block;
+    font-size: 3rem;
+    padding: 1rem;
+    display: block;
+    color: #f5587b;
+    font-weight: bold;
+    text-align: center;
+    background-color: #fff;
+    margin: 0;
+    text-transform: uppercase;
+}
+.gallery-text{
+    flex: 1;
+    color: #fff !important;
+    padding: 1rem;
+}
+.animation-gallery-video{
+    flex: 2;
+}
+.animation-gallery-video a{  
+    width: auto;
+    text-align: center !important;
+    display: flexbox;
+}
+.animation-gallery-video :hover{
+    
+}
+
+a h2{
+    flex: 1;
+    margin-left: 13%;
+    margin-top: 10%;
+    text-shadow: 3px 3px white;
+    display: none;
+    width: auto;
+    text-align: center !important;
+    vertical-align: middle;
+    z-index: 10;
+    position: absolute;
+    color: #f5587b;
+    text-transform: uppercase;
+    opacity: 1 !important;
+    font-weight: bold;
+    font-size: 4em;
+}
+.animation-gallery-video a:hover > h2{
+    display: block;
+}
+.animation-gallery-video a:hover > video{
+    opacity: .2;
+}
+a video{
+    z-index: 50;
+    max-width: 100%;
+    height: auto;
+    transition: all;
+    transition-duration: .2s;
+}
+
+.gallery{
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(100, 1fr));
+    justify-items: center;
+}
+.TDdesign-gallery{
+    flex: 3;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.graphicdesign-gallery{
+    flex: 2;
+    grid-template-columns: 1fr 1fr;
+}
+
+.item>a>img{
+    max-width:100%;
+    width: auto;
+    transition: opacity;
+    transition-duration: .2s;
+}
+.item>a>img:hover{
+    cursor: pointer;
+    opacity: .5;
+}
+
+img{
+    content: "";
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
